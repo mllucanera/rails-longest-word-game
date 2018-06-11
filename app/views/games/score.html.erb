@@ -1,0 +1,13 @@
+<h1>Result:</h1>
+
+<% if @is_a_word %>
+  <% if @coinci %>
+    <p>Congrats!! <%= @attempt %> is an english word and is inside the grid</p>
+  <% else %>
+    <p>WRONG!! <%= @attempt %> is an english word but is not inside the grid</p>
+  <% end %>
+<% else %>
+  <p>WRONG!! <%= @attempt %> is not an english word </p>
+<% end %>
+
+<%= link_to "try another word!", new_path %>

@@ -1,0 +1,20 @@
+
+<h1>
+<%="**** Welcome to the longest word-game! ****"%>
+</h1>
+<h2>
+<%= "Here is your grid:" %>
+</h2>
+<p>
+  <%= @displ_grid %>
+</p>
+
+<form action="/score" method="post">
+   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+   <%= hidden_field_tag :grid, @grid %>
+  <input type="text" name="attempt" placeholder="What's your best shot?">
+  <input type="submit">
+</form>
+
+
+
